@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="generator">
+      <h2>Password Generator</h2>
+      <form>
+        <div class="output">
+            <label for="password"></label>
+            <input type="text" id="password" readonly  [value]="generatedPassword"/>
+          </div>
+          <div class="second">
+
+          
+        <div class="slider-container">
+          <label for="slider">Password Length: <span id="lengthValue">{{slider}}</span></label>
+          <input
+            type="range"
+            name="slider"
+            id="slider"
+            min="6"
+            max="32"
+            value="12"
+            [(ngModel)]="slider"
+            style="accent-color: green;"
+          />
+        </div>
+  
+        <div class="options">
+          <div class="option-item">
+            <input type="checkbox" name="Upper" id="uppercase" [(ngModel)]="includeuppercase" />
+            <label for="uppercase">Include Uppercase Letters</label>
+          </div>
+          <div class="option-item">
+            <input type="checkbox" name="lower" id="lowercase" [(ngModel)]="includelowercase" />
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>
+          <div class="option-item">
+            <input type="checkbox" name="numbers" id="numbers" [(ngModel)]="includenumbers" />
+            <label for="numbers">Include Numbers</label>
+          </div>
+          <div class="option-item">
+            <input type="checkbox" name="symbols" id="symbols" [(ngModel)]="includesymbols"/>
+            <label for="symbols">Include Symbols</label>
+          </div>
+        </div>
+        </div>
+      </form>
+      <div class="passwordStrength">
+          <div class="Stengthtext"></div>
+          <span>Stength</span>
+          <span>{{Strength}}</span>
+          <div class="Strengthbox">
+            <div class="difficulty-box" [ngClass]="{'active1': Strength==='Weak','active2':Strength==='Light','active3':Strength==='Medium','active4':Strength==='Strong'}"></div>
+            <div class="difficulty-box" [ngClass]="{'active2': Strength==='Light','active3':Strength==='Medium','active4':Strength==='Strong'}" ></div>
+            <div class="difficulty-box"[ngClass]="{'active3':Strength==='Medium','active4':Strength==='Strong'}" ></div>
+            <div class="difficulty-box" [ngClass]="{'active4':Strength==='Strong'}"></div>
+          </div>
+      </div>
+  
+      <button class="generate-btn" (click)=generatepassword()>Generate Password</button>
+  
+      
+    </div>
+  </div>
+  

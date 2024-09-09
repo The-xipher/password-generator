@@ -1,1 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+  }
+  
+  .generator h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .output input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  .slider-container {
+    margin: 20px 0;
+  }
+  
+  .slider-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .slider-container input[type="range"] {
+    width: 100%;
+    accent-color: green;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option-item {
+    margin-bottom: 10px;
+  }
+  
+  .option-item input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: green;
+  }
+  
+  .generate-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .generate-btn:hover {
+    background-color: #45a049;
+  }
+
+  
+  .difficulty-box {
+    width: 10px;
+    height: 40px;
+    margin: 0 5px;
+    background-color: grey; /* Default color for inactive boxes */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .difficulty-box.active1 {
+    background-color: red; /* Color for active (lit up) boxes */
+  }
+  .difficulty-box.active2 {
+    background-color: yellow; /* Color for active (lit up) boxes */
+  }
+  .difficulty-box.active3 {
+    background-color: orange; /* Color for active (lit up) boxes */
+  }
+  .difficulty-box.active4 {
+    background-color: green; /* Color for active (lit up) boxes */
+  }
+
+  .passwordStrength{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 5px;
+
+  }
+  
+  .Strengthtext{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .Strengthbox{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  .second{
+    background-color: #3c3c3c;
+
+  }
