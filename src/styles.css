@@ -7,120 +7,169 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-  }
-  
-  .container {
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.container {
     background-color: #000000;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
-  }
-  
-  .generator h2 {
+}
+
+.generator h2 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .output input {
+}
+
+.output input {
     width: 100%;
     padding: 10px;
     border: none;
-    border-radius: 5px;
     background-color: #3c3c3c;
     color: #ffffff;
     text-align: center;
     font-size: 1.2em;
-  }
-  
-  .slider-container {
+}
+
+.slider-container {
     margin: 20px 0;
-  }
-  
-  .slider-container label {
+}
+
+.slider-container label {
     display: block;
     margin-bottom: 10px;
-  }
-  
-  .slider-container input[type="range"] {
+}
+
+.slider-container input[type="range"] {
     width: 100%;
     accent-color: green;
-  }
-  
-  .options {
+    -webkit-appearance: none; /* Removes default styling */
+    appearance: none; /* Removes default styling */
+    height: 8px;
+    background: #32a877;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+}
+
+/* Webkit Browsers (Chrome, Safari) */
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    accent-color: green;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black; /* Black circle */
+    border: 3px solid white; /* White border */
+    cursor: pointer;
+}
+
+/* Firefox */
+.slider-container input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    accent-color: green;
+    border-radius: 50%;
+    background-color: black; /* Black circle */
+    border: 3px solid white; /* White border */
+    cursor: pointer;
+}
+
+.options {
     display: flex;
     flex-direction: column;
-  }
-  
-  .option-item {
+}
+
+.option-item {
     margin-bottom: 10px;
-  }
-  
-  .option-item input[type="checkbox"] {
+}
+
+.option-item input[type="checkbox"] {
     margin-right: 10px;
-    accent-color: green;
-  }
-  
-  .generate-btn {
+    accent-color: #32a877;
+}
+
+.generate-btn {
     width: 100%;
     padding: 10px;
-    border: none;
+    border:#32a877  ;
+    border-style: solid;
     border-radius: 5px;
-    background-color: green;
-    color: #ffffff;
+    background-color: #3c3c3c;
+    color:#32a877 ;
     font-size: 1.2em;
     cursor: pointer;
-  }
-  
-  .generate-btn:hover {
-    background-color: #45a049;
-  }
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
 
-  
-  .difficulty-box {
-    width: 10px;
-    height: 40px;
-    margin: 0 5px;
+}
+
+.generate-btn:hover {
+    background-color: #32a877;
+    color: black;
+}
+
+.difficulty-box {
+    width: 8px;
+    height: 20px;
+    margin: 6px 5px;
     background-color: grey; /* Default color for inactive boxes */
-    border-radius: 5px;
     transition: background-color 0.3s;
-  }
-  
-  .difficulty-box.active1 {
-    background-color: red; /* Color for active (lit up) boxes */
-  }
-  .difficulty-box.active2 {
-    background-color: yellow; /* Color for active (lit up) boxes */
-  }
-  .difficulty-box.active3 {
-    background-color: orange; /* Color for active (lit up) boxes */
-  }
-  .difficulty-box.active4 {
-    background-color: green; /* Color for active (lit up) boxes */
-  }
+}
 
-  .passwordStrength{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 5px;
+.difficulty-box.active1 {
+    background-color: red; /* Color for Weak */
+}
 
-  }
-  
-  .Strengthtext{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-  }
+.difficulty-box.active2 {
+    background-color: yellow; /* Color for Light */
+}
 
-  .Strengthbox{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-  }
-  .second{
+.difficulty-box.active3 {
+    background-color: orange; /* Color for Medium */
+}
+
+.difficulty-box.active4 {
+    background-color: green; /* Color for Strong */
+}
+
+.passwordStrength {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(41, 37, 37);
+    margin: 10px;
+}
+
+.Strengthtext {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    font-size: 10px;
+}
+
+.Strengthbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-box {
     background-color: #3c3c3c;
+    width: 100%;
+}
 
-  }
+#lengthValue{
+    color: #32a877;
+    margin-left: 30%;
+}
+.output-box{
+    width: 93%;
+}

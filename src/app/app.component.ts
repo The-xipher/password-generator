@@ -58,10 +58,10 @@ this.generatedPassword=Array.from({length:this.slider}).map(()=>charSet.charAt(M
     if (this.includenumbers) this.passwordStrength++;
     if (this.includesymbols) this.passwordStrength++;
  
-    if(this.passwordStrength==1)this.Strength="Weak"
-    if(this.passwordStrength==2)this.Strength="Light"
-    if(this.passwordStrength==3)this.Strength="Medium"
-    if(this.passwordStrength==4)this.Strength="Strong"
+    if(this.passwordStrength==1)this.Strength="WEAK"
+    if(this.passwordStrength==2)this.Strength="LIGHT"
+    if(this.passwordStrength==3)this.Strength="MEDIUM"
+    if(this.passwordStrength==4)this.Strength="STRONG"
  
 }
 }
